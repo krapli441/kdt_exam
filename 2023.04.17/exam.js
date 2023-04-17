@@ -1,13 +1,32 @@
 function examOne(first, second) {
+  if (typeof first === "string") {
+    console.log("문자열 데이터를 입력하셨습니다.");
+  } else if (typeof second === "string") {
+    console.log("문자열 데이터를 입력하셨습니다.");
+  } else {
+    return first + second;
+  }
   // 매개변수가 문자열일 경우, 다음과 같은 문자열이 나타나도록 작성하시오.
   // "문자열 데이터를 입력하셨습니다."
 }
 
 function examTwo(first, second, third) {
+  if (typeof first !== "number") {
+    console.log("숫자를 입력해주세요.");
+  } else if (typeof second !== "number") {
+    console.log("숫자를 입력해주세요.");
+  } else if (typeof third !== "number") {
+    console.log("숫자를 입력해주세요.");
+  } else {
+    return first * second * third;
+  }
   // 숫자여야만 실행되도록 타입을 확인하는 로직을 작성하시오.
 }
 
 function examThree(str) {
+  if (typeof str === "string") {
+    
+  }
   // 문자열만 실행되도록 타입을 확인하는 로직을 구하시오.
   // length 프로퍼티를 사용하지 않고 길이값을 구하시오.
 }
