@@ -36,6 +36,7 @@ function examThree(str) {
   // 문자열만 실행되도록 타입을 확인하는 로직을 구하시오.
   // length 프로퍼티를 사용하지 않고 길이값을 구하시오.
 }
+// ! 문자열의 끝은 undefined로 표시된다
 
 function examFour(array) {
   if (Array.isArray(array)) {
