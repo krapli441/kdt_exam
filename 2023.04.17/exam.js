@@ -48,19 +48,14 @@ function examFour(array) {
 
 function examFive(array) {
   if (Array.isArray(array)) {
-    return array[0] + array[1] + array[2];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+      count += array[i];
+    }
+    return count;
   }
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
 }
-
-// function examFive(array) {
-//   if (Array.isArray(array)) {
-//     let count = 0;
-//     array.forEach((item) => (count += item));
-//     return count;
-//   }
-//   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
-// }
 
 console.log(examOne(2, 3)); // Question 1 덧셈 로직 만들기
 console.log(examTwo(2, 3, 4)); //  Question 2 곱셈 로직 만들기
