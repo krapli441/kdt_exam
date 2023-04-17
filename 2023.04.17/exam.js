@@ -47,9 +47,6 @@ function examFour(array) {
 
 function examFive(array) {
   if (Array.isArray(array)) {
-    for (i = 0; i < array.length; i++) {
-      arr;
-    }
     return array[0] + array[1] + array[2];
   }
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
