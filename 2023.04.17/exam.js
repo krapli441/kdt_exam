@@ -25,17 +25,30 @@ function examTwo(first, second, third) {
 
 function examThree(str) {
   if (typeof str === "string") {
-    
+    console.log("일단 문자열임");
+    let change = new Array(str);
+    console.log(change);
+  } else {
+    console.log("문자열을 입력해주세요.");
   }
   // 문자열만 실행되도록 타입을 확인하는 로직을 구하시오.
   // length 프로퍼티를 사용하지 않고 길이값을 구하시오.
 }
 
 function examFour(array) {
+  if (Array.isArray(array)) {
+    console.log("배열입니다.");
+    for (i = 0; i < array.length; i++) {
+      
+    }
+  }
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
 }
 
 function examFive(array) {
+  if (Array.isArray(array)) {
+    array.reduce();
+  }
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
 }
 
