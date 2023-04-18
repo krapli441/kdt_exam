@@ -58,12 +58,25 @@ console.log(exampleThree([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 //
 
-// function exampleFour(object) {
-//   // 매개변수 object의 프로퍼티가 배열인지를 검사한 후,
-//   // 배열의 요소가 모두 숫자 형태인지 검사하는 로직을 작성하세요.
-//   let value; // 지역변수에 검사결과를 boolean 타입으로 할당 후 리턴하세요.
-//   return value;
-// }
+function exampleFour(object) {
+  let value = true;
+  if (Array.isArray(object)) {
+    for (let i = 0; i < object.length; i++) {
+      if (typeof object[i] !== "number") {
+        console.log("배열에 숫자가 아닌 값이 있습니다.");
+        value = false;
+        break;
+      }
+    }
+  } else {
+    console.log("매개변수에 배열이 입력되지 않았습니다.");
+    value = false;
+  }
+  return value;
+}
+
+console.log(exampleFour([1, 2, 3]));
+console.log(exampleFour([1, 2, "삼"]));
 
 // function exampleFive(objectOne, objectTwo) {
 //   // objectOne 매개변수는 최상단 basicData 객체가 인자로 들어올 것을 가정합니다.
