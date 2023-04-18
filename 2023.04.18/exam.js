@@ -8,7 +8,7 @@ let basicData = {
 function exampleOne(count, min, max) {
   let exampleArr = [];
   for (let i = min; min <= count; min++) {
-    let calc = Math.floor(Math.random() * 10).toFixed(2);
+    let calc = Math.floor(Math.random() * 1000) / 100;
     exampleArr.push(calc);
   }
   return exampleArr;
@@ -78,15 +78,13 @@ function exampleFour(object) {
 console.log(exampleFour([1, 2, 3]));
 console.log(exampleFour([1, 2, "삼"]));
 
-// function exampleFive(objectOne, objectTwo) {
-//   // objectOne 매개변수는 최상단 basicData 객체가 인자로 들어올 것을 가정합니다.
-//   // objectTwo는 exampleTwo 함수의 리턴값이 인자로 들어올 것을 가정합니다.
-//   let value;
-//   // objectOne, objectTwo 모두 각각 프로퍼티의 값을 거한 뒤,
-//   // 위의 지역번수 value에 총합을 생성하여 리턴하는 로직을 작성하세요.
-//   return value;
-// }
+function exampleFive(objectOne, objectTwo) {
+  // objectOne 매개변수는 최상단 basicData 객체가 인자로 들어올 것을 가정합니다.
+  // objectTwo는 exampleTwo 함수의 리턴값이 인자로 들어올 것을 가정합니다.
+  let value;
+  // objectOne, objectTwo 모두 각각 프로퍼티의 값을 더한 뒤,
+  // 위의 지역번수 value에 총합을 생성하여 리턴하는 로직을 작성하세요.
+  return value;
+}
 
-// console.log(
-//   exampleFive(basicData, exampleTwo(/*exampleOne 함수의 리턴값 및 구성 */))
-// );
+console.log(exampleFive(basicData, exampleTwo(exampleOne(10, 1, 10))));
