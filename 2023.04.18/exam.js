@@ -81,12 +81,19 @@ console.log(exampleFour([1, 2, 3]));
 console.log(exampleFour([1, 2, "삼"]));
 
 function exampleFive(objectOne, objectTwo) {
-  // objectOne 매개변수는 최상단 basicData 객체가 인자로 들어올 것을 가정합니다.
-  // objectTwo는 exampleTwo 함수의 리턴값이 인자로 들어올 것을 가정합니다.
-  let value;
-  // objectOne, objectTwo 모두 각각 프로퍼티의 값을 더한 뒤,
-  // 위의 지역번수 value에 총합을 생성하여 리턴하는 로직을 작성하세요.
+  let value = 0;
+  value +=
+    objectOne.count + objectOne.min + objectOne.max + objectOne.divideNumber;
+  let array = objectTwo.a.concat(objectTwo.b);
+  for (let i = 0; i < array.length; i++) {
+    value += Number(array[i]);
+  }
   return value;
 }
 
-console.log(exampleFive(basicData, exampleTwo(exampleOne(10, 1, 10))));
+console.log(
+  exampleFive(
+    basicData,
+    exampleTwo(exampleOne(10, 1, 10), basicData.divideNumber)
+  )
+);
