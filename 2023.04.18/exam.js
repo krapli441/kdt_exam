@@ -16,6 +16,8 @@ function exampleOne(count, min, max) {
 
 console.log(exampleOne(10, 1, 10));
 
+//
+
 function exampleTwo(array, divideNumber) {
   let exampleObject = {
     a: [],
@@ -32,10 +34,6 @@ function exampleTwo(array, divideNumber) {
   } else {
     console.log("숫자를 입력해주세요.");
   }
-  // 0번째 매개변수 array는 숫자(실수)로 이루어진 배열입니다.
-  // 1번째 매개변수는 정수만을 입력하도록 타입을 제어하고,
-  // 매개변수 divideNumber보다 작은 수는 a 배열에, 큰 수는 b 배열에 추가하는 로직을 작성하세요.
-  // divideNumber는 basicData 객체의 divideNumber 속성값을 사용합니다.
   console.log(exampleObject);
 }
 
@@ -44,13 +42,23 @@ exampleTwo(
   5
 );
 
-// function exampleThree(array) {
-//   // 매개변수 array의 모든 매개변수를 더하는 로직을 작성하세요.
-//   let value; // 더한 결과 값을 저장하는 변수입니다.
-//   return value;
-// }
+//
 
-// function exampleFout(object) {
+function exampleThree(array) {
+  if (Array.isArray(array)) {
+    let value = 0;
+    for (let i = 0; i < array.length; i++) {
+      value += array[i];
+    }
+    return value;
+  }
+}
+
+console.log(exampleThree([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+//
+
+// function exampleFour(object) {
 //   // 매개변수 object의 프로퍼티가 배열인지를 검사한 후,
 //   // 배열의 요소가 모두 숫자 형태인지 검사하는 로직을 작성하세요.
 //   let value; // 지역변수에 검사결과를 boolean 타입으로 할당 후 리턴하세요.
