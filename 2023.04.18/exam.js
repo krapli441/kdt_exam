@@ -6,7 +6,6 @@ let basicData = {
 };
 
 function exampleOne(count, min, max) {
-  // 위의 basicData를 참고하여 매개변수를 작성하세요.
   let exampleArr = [];
   for (let i = min; min <= count; min++) {
     let calc = Math.floor(Math.random() * 10).toFixed(2);
@@ -17,17 +16,33 @@ function exampleOne(count, min, max) {
 
 console.log(exampleOne(10, 1, 10));
 
-// function exampleTwo(array, divideNumber) {
-//   let exampleObject = {
-//     a: [],
-//     b: [],
-//   };
-//   // 0번째 매개변수 array는 숫자(실수)로 이루어진 배열입니다.
-//   // 1번째 매개변수는 정수만을 입력하도록 타입을 제어하고,
-//   // 매개변수 divideNumber보다 작은 수는 a 배열에, 큰 수는 b 배열에 추가하는 로직을 작성하세요.
-//   // divideNumber는 basicData 객체의 divideNumber 속성값을 사용합니다.
-//   return exampleObject;
-// }
+function exampleTwo(array, divideNumber) {
+  let exampleObject = {
+    a: [],
+    b: [],
+  };
+  if (typeof divideNumber === "number") {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < divideNumber) {
+        exampleObject.a.push(array[i]);
+      } else {
+        exampleObject.b.push(array[i]);
+      }
+    }
+  } else {
+    console.log("숫자를 입력해주세요.");
+  }
+  // 0번째 매개변수 array는 숫자(실수)로 이루어진 배열입니다.
+  // 1번째 매개변수는 정수만을 입력하도록 타입을 제어하고,
+  // 매개변수 divideNumber보다 작은 수는 a 배열에, 큰 수는 b 배열에 추가하는 로직을 작성하세요.
+  // divideNumber는 basicData 객체의 divideNumber 속성값을 사용합니다.
+  console.log(exampleObject);
+}
+
+exampleTwo(
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+  5
+);
 
 // function exampleThree(array) {
 //   // 매개변수 array의 모든 매개변수를 더하는 로직을 작성하세요.
