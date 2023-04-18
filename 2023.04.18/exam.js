@@ -34,12 +34,14 @@ function exampleTwo(array, divideNumber) {
   } else {
     console.log("숫자를 입력해주세요.");
   }
-  console.log(exampleObject);
+  return exampleObject;
 }
 
-exampleTwo(
-  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-  5
+console.log(
+  exampleTwo(
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    5
+  )
 );
 
 //
