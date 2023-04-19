@@ -36,8 +36,8 @@ let fromJsonData = {
 
 function exampleOne(basicData, fromJsonData) {
   let value = "";
-  // 아래의 호출부를 함고하여, 지역변수 value에
-  // 적정한 문자열 데이터로 객체를 가공하는 코드를 작성한다.
+  // 아래의 호출부를 참고하여, 지역변수 value에
+  // 작성한 문자열 데이터로 객체를 가공하는 코드를 작성한다.
 
   return value;
 }
@@ -54,3 +54,15 @@ element.innerHTML = exampleOne(basicData, fromJsonData);
 class ExampleTwo {
   constructor() {}
 }
+
+//! 과정
+//? 1. 우선 위에서 아래로 한 차례 쭉 읽어봄. -> 무슨 말인지 잘 모르겠음.
+//? 2. GPT에게 위 코드에서 주석이 어떤 걸 말하는 거냐고 물어봤음 -> 무언가 대답하는데, 역시 무슨 말인지 잘 모르겠음.
+//? 3. 그래서 코드를 다시 여러차례 읽어보고, 나름대로 해석해본 과정 :
+//?   3-1. fromJsonData 안의 값을 각각 분류한 뒤 '문자열로 가공'함.
+//?   3-2. 이렇게 문자열로 가공된 값을 basicData의 header, main, footer에 넣어줌.
+//?   3-3. '문자열로 가공한 뒤 basicData 안에 넣는 기능'은 exampleOne 함수 안에 작성함.
+//?   3-4. 이렇게 만들어진 exampleOne 함수를 element.innerHTML 안에 작성함.
+//?   3-4. 예상 결과 ->
+//?      exampleOne 함수가 실행되면 fromJsonData 안의 값을 분류하여 '문자열로 가공'한 뒤 basicData 안에 넣어줌.
+//?      basicData안의 값을 토대로 element.innerHTML 안의 내용 작성. innerHTML에는 basicData 안의 자료들이 들어갈 것이고, html 문서가 완성될 것임.-*
