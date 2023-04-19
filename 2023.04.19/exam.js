@@ -36,12 +36,8 @@ let fromJsonData = {
 
 function exampleOne(basicData, fromJsonData) {
   let value = "";
-  value = JSON.stringify(fromJsonData);
-  console.log(basicData);
-  console.log(value.header);
-  console.log(value.main);
-  console.log(value.footer);
-
+  let stringifyData = JSON.stringify(fromJsonData);
+  console.log(stringifyData);
   // 아래의 호출부를 참고하여, 지역변수 value에
   // 작성한 문자열 데이터로 객체를 가공하는 코드를 작성한다.
 
@@ -49,7 +45,6 @@ function exampleOne(basicData, fromJsonData) {
 }
 
 console.log(exampleOne(basicData, fromJsonData));
-console.log(basicData);
 
 // // 특정 HTML 요소에 값을 넣는 것을 가정한다.
 // const element = "";
@@ -87,3 +82,15 @@ console.log(basicData);
 //? 7. 문자열로 가공하긴 했는데, 이걸 어떻게 구분해서 넣지?
 
 //? 8. 대뜸 'basicData.header = value.header;' 라고 작성. undefined가 나옴.
+
+//? 9. 문자열을 구분할 수 있는 방법에 대해 찾아보다가 내가 알고 있는 startWith이 나와 이것을 활용해보기로 함.
+
+//? 10. 왜인지 모르겠지만 안된다. 문자열로 변환해서 객체(였던 것)의 값에 접근할 수가 없다.
+
+//? 11. 문자열을 분류하는 방법에 대해 GPT에게 물어봤음. '정규표현식'을 사용하면 분류할 수 있다고 함.
+
+//? 12. 내가 모르는 기술임. 사용하지 않음. 대신 문자열로 바꾼 값을 다시 json.parse 해보기로 했다.
+
+//? 13. 그런데 생각해보니 오늘 과제는 JSON.parse가 이미 되어있다는 설정임.. parse된 값을 굳이 다시 문자열로 바꾸는 이유가 뭘까..?
+
+//? 14. '문자열 데이터로 가공'하라는 것이 무슨 의미인지 다시 고민함. 애초에 JSON.stringify를 사용할 필요가 없었나?
