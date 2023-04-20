@@ -17,7 +17,7 @@ function arrayLengthEven(array) {
 function isExampleTwo(first, second) {
   //Guide : exampleOne() 함수를 호출하여 타입 검사를 따로 합니다.
   //Guide : 타입 검사가 실패하면 에러를 발생시켜 함수가 실행되지 않도록 조치합니다.
-  exampleOne(first, second);
+  exampleOne(first, second, dataType);
 
   let booleanResult;
 
@@ -33,6 +33,8 @@ function isExampleTwo(first, second) {
     return new Error("조건식이 boolean이 아니어서 리턴 하지 못했습니다.");
   }
 }
+
+console.log(isExampleTwo("십", 20));
 
 let basicData = [4, 6, 23, 5, 94, 35, 44, 66];
 
