@@ -37,14 +37,22 @@ let fromJsonData = {
 function exampleOne(basicData, fromJsonData) {
   let value = "";
   basicData.header = fromJsonData.header;
-  let headerValue = `<div class="header"; style="${basicData.header.style};"></div>`;
-  basicData.main = fromJsonData.main;
-  let mainValue = `<div class="main" style="${basicData.main}">`;
-  basicData.footer = fromJsonData.footer;
-  let footerValue = `<div class="footer" style="${basicData.footer}">`;
-  console.log(basicData);
-  value = JSON.stringify(headerValue, mainValue, footerValue);
-
+  let header = JSON.stringify(basicData.header.content);
+  let headerStyle = JSON.stringify(basicData.header.style);
+  console.log(header);
+  console.log(headerStyle);
+  let headerElement = `<div class="header" style=${headerStyle}> </div>`;
+  // let headerValue = `<div class="header"; style="${basicData.header.style};"></div>`;
+  // console.log(headerValue);
+  // basicData.main = fromJsonData.main;
+  // let mainValue = `<div class="main" style="${basicData.main}">`;
+  // console.log(mainValue);
+  // basicData.footer = fromJsonData.footer;
+  // let footerValue = `<div class="footer" style="${basicData.footer}">`;
+  // console.log(footerValue);
+  // console.log(basicData);
+  // value = JSON.stringify(headerValue, mainValue, footerValue);
+  value = JSON.stringify(headerElement);
   return value;
 }
 
