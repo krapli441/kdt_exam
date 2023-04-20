@@ -44,12 +44,12 @@ function exampleOne(basicData, fromJsonData) {
   return value;
 }
 
-// console.log(exampleOne(basicData, fromJsonData));
+console.log(exampleOne(basicData, fromJsonData));
 
 // 특정 HTML 요소에 값을 넣는 것을 가정한다.
-const element = "";
-element.innerHTML = exampleOne(basicData, fromJsonData);
-console.log(element);
+// const element = "";
+// element.innerHTML = exampleOne(basicData, fromJsonData);
+// console.log(element);
 // // 위의 fromJsonData와 같은 객체나 JSON을 생성하기 위한
 // // 생성자함수, 클래스를 작성한다.
 // // setter 기능을 활용하여 인스턴스의 값들은 모두 "문자열"만 들어가도록
