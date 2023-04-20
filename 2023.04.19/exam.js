@@ -37,27 +37,32 @@ let fromJsonData = {
 function exampleOne(basicData, fromJsonData) {
   let value = "";
   basicData.header = fromJsonData.header;
+  let headerValue = `<div class="header"; style="${basicData.header.style};"></div>`;
   basicData.main = fromJsonData.main;
+  let mainValue = `<div class="main" style="${basicData.main}">`;
   basicData.footer = fromJsonData.footer;
-  value = JSON.stringify(basicData);
+  let footerValue = `<div class="footer" style="${basicData.footer}">`;
+  console.log(basicData);
+  value = JSON.stringify(headerValue, mainValue, footerValue);
 
   return value;
 }
 
 console.log(exampleOne(basicData, fromJsonData));
 
-// 특정 HTML 요소에 값을 넣는 것을 가정한다.
-// const element = "";
-// element.innerHTML = exampleOne(basicData, fromJsonData);
-// console.log(element);
-// // 위의 fromJsonData와 같은 객체나 JSON을 생성하기 위한
-// // 생성자함수, 클래스를 작성한다.
-// // setter 기능을 활용하여 인스턴스의 값들은 모두 "문자열"만 들어가도록
-// // 안정성을 확보한다.
+//특정 HTML 요소에 값을 넣는 것을 가정한다.
+const element = document.getElementById("root");
+console.log(element);
+element.innerHTML = exampleOne(basicData, fromJsonData);
 
-// class ExampleTwo {
-//   constructor() {}
-// }
+// 위의 fromJsonData와 같은 객체나 JSON을 생성하기 위한
+// 생성자함수, 클래스를 작성한다.
+// setter 기능을 활용하여 인스턴스의 값들은 모두 "문자열"만 들어가도록
+// 안정성을 확보한다.
+
+class ExampleTwo {
+  constructor() {}
+}
 
 //! 과정
 //? 1. 우선 위에서 아래로 한 차례 쭉 읽어봄. -> 무슨 말인지 잘 모르겠음.
@@ -96,3 +101,11 @@ console.log(exampleOne(basicData, fromJsonData));
 //? 14. '문자열 데이터로 가공'하라는 것이 무슨 의미인지 다시 고민함. 애초에 JSON.stringify를 사용할 필요가 없었나?
 
 //? 15. 순서를 바꿔보려고 시도. fromJsonData 안의 값을 먼저 basicData 안에 넣어준 뒤, 값이 들어간 basicData를 JSON.stringify 하여 value 안에 담아줌.
+
+//! 2023.04.20 재시도
+
+//? 1. 우선 시각적으로 뭔가 보여야 할 것 같아서 index.html 파일을 생성.
+
+//? 2. html에서 #root을 생성한 뒤 exam.js에서 #root을 element라는 변수로 선언해줌. 이후 바로 element.innerHTML = exampleOne(basicData, fromJsonData);을 호출.
+
+//? 3. 확인해보니 root에서 일단 '텍스트'가 입력되기는 했음.

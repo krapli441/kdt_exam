@@ -1,4 +1,4 @@
-function exampleOne(first, second, basicType) {
+function exampleOne(first, second, dataType) {
   if (typeof first !== dataType && typeof second !== dataType) {
     return new Error(
       `매개변수 first, second는 모두 ${dataType} 타입이어야 합니다.`
