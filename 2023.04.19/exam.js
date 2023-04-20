@@ -41,7 +41,7 @@ function exampleOne(basicData, fromJsonData) {
   let headerStyle = JSON.stringify(basicData.header.style);
   console.log(header);
   console.log(headerStyle);
-  let headerElement = `<div class="header" style=${headerStyle}> </div>`;
+  let headerElement = `<div class="header" style=\`${headerStyle}\`> </div>`;
   // let headerValue = `<div class="header"; style="${basicData.header.style};"></div>`;
   // console.log(headerValue);
   // basicData.main = fromJsonData.main;
@@ -58,7 +58,6 @@ function exampleOne(basicData, fromJsonData) {
 
 console.log(exampleOne(basicData, fromJsonData));
 
-//특정 HTML 요소에 값을 넣는 것을 가정한다.
 const element = document.getElementById("root");
 console.log(element);
 element.innerHTML = exampleOne(basicData, fromJsonData);
