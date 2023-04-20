@@ -36,20 +36,20 @@ let fromJsonData = {
 
 function exampleOne(basicData, fromJsonData) {
   let value = "";
-  let stringifyData = JSON.stringify(fromJsonData);
-  console.log(stringifyData);
-  // 아래의 호출부를 참고하여, 지역변수 value에
-  // 작성한 문자열 데이터로 객체를 가공하는 코드를 작성한다.
+  basicData.header = fromJsonData.header;
+  basicData.main = fromJsonData.main;
+  basicData.footer = fromJsonData.footer;
+  value = JSON.stringify(basicData);
 
   return value;
 }
 
-console.log(exampleOne(basicData, fromJsonData));
+// console.log(exampleOne(basicData, fromJsonData));
 
-// // 특정 HTML 요소에 값을 넣는 것을 가정한다.
-// const element = "";
-// element.innerHTML = exampleOne(basicData, fromJsonData);
-
+// 특정 HTML 요소에 값을 넣는 것을 가정한다.
+const element = "";
+element.innerHTML = exampleOne(basicData, fromJsonData);
+console.log(element);
 // // 위의 fromJsonData와 같은 객체나 JSON을 생성하기 위한
 // // 생성자함수, 클래스를 작성한다.
 // // setter 기능을 활용하여 인스턴스의 값들은 모두 "문자열"만 들어가도록
@@ -94,3 +94,5 @@ console.log(exampleOne(basicData, fromJsonData));
 //? 13. 그런데 생각해보니 오늘 과제는 JSON.parse가 이미 되어있다는 설정임.. parse된 값을 굳이 다시 문자열로 바꾸는 이유가 뭘까..?
 
 //? 14. '문자열 데이터로 가공'하라는 것이 무슨 의미인지 다시 고민함. 애초에 JSON.stringify를 사용할 필요가 없었나?
+
+//? 15. 순서를 바꿔보려고 시도. fromJsonData 안의 값을 먼저 basicData 안에 넣어준 뒤, 값이 들어간 basicData를 JSON.stringify 하여 value 안에 담아줌.
