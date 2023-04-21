@@ -35,19 +35,19 @@ let fromJsonData = {
 };
 
 function exampleOne(basicData, fromJsonData) {
-  let value = ``;
+  let value = "";
   basicData.header = fromJsonData.header;
   basicData.main = fromJsonData.main;
   basicData.footer = fromJsonData.footer;
-  value = JSON.stringify(basicData, null, 2);
+  value = fromJsonData.header.content;
   return value;
 }
 
 console.log(exampleOne(basicData, fromJsonData));
 
-// const element = document.getElementById("root");
-// console.log(element);
-// element.innerHTML = exampleOne(basicData, fromJsonData);
+const element = document.getElementById("root");
+console.log(element);
+element.innerHTML = exampleOne(basicData, fromJsonData);
 
 // 위의 fromJsonData와 같은 객체나 JSON을 생성하기 위한
 // 생성자함수, 클래스를 작성한다.
