@@ -17,7 +17,7 @@ function arrayLengthEven(array) {
 function isExampleTwo(first, second) {
   //Guide : exampleOne() 함수를 호출하여 타입 검사를 따로 합니다.
   //Guide : 타입 검사가 실패하면 에러를 발생시켜 함수가 실행되지 않도록 조치합니다.
-  exampleOne(first, second, dataType);
+  exampleOne(first, second, "");
 
   let booleanResult;
 
@@ -34,12 +34,13 @@ function isExampleTwo(first, second) {
   }
 }
 
-console.log(isExampleTwo("십", 20));
+console.log(isExampleTwo(10, 20));
 
 let basicData = [4, 6, 23, 5, 94, 35, 44, 66];
 
 function exampleThree(array, functionOne, functionTwo) {
   // 매개변수 인자로 들어오는 함수 두 개는 데이터 타입이 모두 함수여야 함.
+  exampleOne(functionTwo, functionOne, "function");
   // 매개변수 array의 모든 원소는 숫자 정수여야 함.
   // 매개변수 array의 배결 길이(length)는 짝수여아 함. 홀수라면 10을 추가하여 짝수를 만듬.
 
@@ -55,7 +56,7 @@ function exampleThree(array, functionOne, functionTwo) {
 
   return arrayResult;
 }
-
-console.log(exampleThree(basicData, exampleOne, isExampleTwo));
+console.log(typeof exampleOne);
+// console.log(exampleThree(basicData, exampleOne, isExampleTwo));
 // Q 위의 콘솔을 활용하여
 // 함수 exampleThree()의 리턴값을 통해 재조립된 배열을 만드시오.
