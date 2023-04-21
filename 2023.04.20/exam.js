@@ -60,3 +60,8 @@ console.log(typeof exampleOne);
 // console.log(exampleThree(basicData, exampleOne, isExampleTwo));
 // Q 위의 콘솔을 활용하여
 // 함수 exampleThree()의 리턴값을 통해 재조립된 배열을 만드시오.
+
+//* 2023.04.21 과정
+
+//! isExampleTwo()를 호출하려면 매개면수가 2개 필요한데 함수 안의 exampleOne()를 호출할 매개변수는 3개여서.. 이 부분에 혼란이 좀 있었습니다.
+//! 예준님께 설명을 들었는데 exampleOne의 세번째 매개변수를 "function"으로 하면 구분할 수 있다고 하셨는데, typeof에 function도 포함된 줄 몰랐습니다.
