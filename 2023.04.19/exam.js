@@ -35,32 +35,19 @@ let fromJsonData = {
 };
 
 function exampleOne(basicData, fromJsonData) {
-  let value = "";
+  let value = ``;
   basicData.header = fromJsonData.header;
-  let header = JSON.stringify(basicData.header.content);
-  let headerStyle = JSON.stringify(basicData.header.style);
-  console.log(header);
-  console.log(headerStyle);
-  let headerElement = `<div class="header" style=\`${headerStyle}\`> </div>`;
-  // let headerValue = `<div class="header"; style="${basicData.header.style};"></div>`;
-  // console.log(headerValue);
-  // basicData.main = fromJsonData.main;
-  // let mainValue = `<div class="main" style="${basicData.main}">`;
-  // console.log(mainValue);
-  // basicData.footer = fromJsonData.footer;
-  // let footerValue = `<div class="footer" style="${basicData.footer}">`;
-  // console.log(footerValue);
-  // console.log(basicData);
-  // value = JSON.stringify(headerValue, mainValue, footerValue);
-  value = JSON.stringify(headerElement);
+  basicData.main = fromJsonData.main;
+  basicData.footer = fromJsonData.footer;
+  value = JSON.stringify(basicData, null, 2);
   return value;
 }
 
 console.log(exampleOne(basicData, fromJsonData));
 
-const element = document.getElementById("root");
-console.log(element);
-element.innerHTML = exampleOne(basicData, fromJsonData);
+// const element = document.getElementById("root");
+// console.log(element);
+// element.innerHTML = exampleOne(basicData, fromJsonData);
 
 // 위의 fromJsonData와 같은 객체나 JSON을 생성하기 위한
 // 생성자함수, 클래스를 작성한다.
