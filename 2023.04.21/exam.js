@@ -26,12 +26,83 @@ const currency = {
 function exampleOne(inputPrice, currency, basicData) {
   if (inputPrice === 1000) {
     console.log(`${currency.thousand.name}을 넣으셨습니다.`);
-    for (i = 0; i <= basicData.length; i++) {
-      if (inputPrice === basicData[i].price) {
-        console.log(
-          `${currency.thousand.name}을 통해 구매할 수 있는 제품들은 ${basicData[i].name}입니다.`
-        );
+    let possibleFoodList = [];
+    for (i = 0; i < basicData.length; i++) {
+      if (inputPrice >= basicData[i].price) {
+        possibleFoodList.push(basicData[i].name);
       }
+    }
+    if (possibleFoodList.length > 0) {
+      console.log(
+        `${currency.thousand.name}으로 구매할 수 있는 제품들은 ${possibleFoodList}입니다.`
+      );
+    }
+  }
+
+  if (inputPrice === 5000) {
+    console.log(`${currency.fiveThousand.name}을 넣으셨습니다.`);
+    let possibleFoodList = [];
+    for (i = 0; i < basicData.length; i++) {
+      if (inputPrice >= basicData[i].price) {
+        possibleFoodList.push(basicData[i].name);
+      }
+    }
+    if (possibleFoodList.length > 0) {
+      console.log(
+        `${currency.thousand.name}으로 구매할 수 있는 제품들은 ${possibleFoodList}입니다.`
+      );
+      console.log("당신은 부자시군요. 531302-04-062449 국민 박준형");
+    }
+  }
+
+  if (inputPrice === 10000) {
+    console.log(`${currency.tenThousand.name}을 넣으셨습니다.`);
+    let possibleFoodList = [];
+    for (i = 0; i < basicData.length; i++) {
+      if (inputPrice >= basicData[i].price) {
+        possibleFoodList.push(basicData[i].name);
+      }
+    }
+    if (possibleFoodList.length > 0) {
+      console.log(
+        `${currency.thousand.name}으로 구매할 수 있는 제품들은 ${possibleFoodList}입니다.`
+      );
+      console.log("당신은 부자시군요. 531302-04-062449 국민 박준형");
+    }
+  }
+
+  if (inputPrice === 500) {
+    console.log(`${currency.fiveHundred.name}을 넣으셨습니다.`);
+    let possibleFoodList = [];
+    for (i = 0; i < basicData.length; i++) {
+      if (inputPrice >= basicData[i].price) {
+        possibleFoodList.push(basicData[i].name);
+      }
+    }
+    if (possibleFoodList.length > 0) {
+      console.log(
+        `${currency.thousand.name}으로 구매할 수 있는 제품들은 ${possibleFoodList}입니다.`
+      );
+    } else {
+      console.log(
+        `${currency.fiveHundred.name}으로 살 수 있는 제품은 없습니다.`
+      );
+    }
+  }
+  if (inputPrice === 100) {
+    console.log(`${currency.hundred.name}을 넣으셨습니다.`);
+    let possibleFoodList = [];
+    for (i = 0; i < basicData.length; i++) {
+      if (inputPrice >= basicData[i].price) {
+        possibleFoodList.push(basicData[i].name);
+      }
+    }
+    if (possibleFoodList.length > 0) {
+      console.log(
+        `${currency.thousand.name}으로 구매할 수 있는 제품들은 ${possibleFoodList}입니다.`
+      );
+    } else {
+      console.log(`${currency.hundred.name}으로 살 수 있는 제품은 없습니다.`);
     }
   }
 }
@@ -43,6 +114,9 @@ console.log(exampleOne(1000, currency, basicData));
 //* 우선 exampleOne에 천원권을 입력하고 호출.
 //* 'currency.thousand.name' 을 통해 구매할 수 있는 제품들은 'basicData[i].name' 나오도록 함수 변경.
 //* console.log는 잘 나오나, 'price'를 읽을 수 없다는 오류 뜸.
+//? 반복문의 비교 연산자 문제였음. 해결.
+//* 구매할 수 있는 물건들을 한 줄씩 출력하는게 맘에 들지 않았음.
+//* 빈 배열을 담은 뒤 결과값을 push를 통해 담아내도록 함.
 
 // 원본 주석
 
