@@ -40,7 +40,7 @@ function exampleOne(object, array) {
   for (let i = 0; i < Object.keys(basicData).length; i++) {
     if (Object.values(basicData)[i].children === null) {
       const id = basicData[Object.keys(basicData)[i]].id;
-      value += `<div>${id}</div>`;
+      value += `<div id= ${id}>${elementData[i]}</div>`;
       // "<div>" + Object.values(basicData[i]) + elementData[i] + "</div>";
       // value += "<div>" + Object.values(basicData[i].children) + "</div>";
       // value += "<div>" + Object.values(basicData[i].children) + "</div>";
