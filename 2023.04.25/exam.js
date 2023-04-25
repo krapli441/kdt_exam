@@ -40,10 +40,13 @@ const basicData = [
 
 // console.log(exampleOne(basicData, "string", "아오"));
 
-//* 2023.04.25 문제풀이
+//* 2023.04.25 시도
 
 // 1. 일단 적어보고 그대로 실행.
 // 2. 예제의 기능 자체는 문제없이 잘 작동한다. 이런 걸 내가 만들 수 있을까?
+// 3. class를 이용해서 arr가 array인지 판별하는 로직까진 작성.
+// 4. 두번째 매개변수인 dataType의 데이터 타입을 알아보려고 했는데 무슨 짓을 해도 undefined가 뜬다.
+// 5. basicData에 없는 값을 써도 itemToFind에 값이 추가됨...
 
 class ObjectFilter {
   constructor(arr, dataType, itemToFind) {
@@ -69,16 +72,9 @@ class ObjectFilter {
       console.log(
         `찾으려는 데이터 타입은 ${this.dataType} 데이터 타입이어야 합니다.`
       );
-    } else {
-      this.dataType = typeof value;
-      if (typeof this.itemToFind !== this.dataType) {
-        console.log(
-          `세 번째 매개변수에 들어갈 데이터는 ${this.dataType} 데이터 타입이어야 합니다.`
-        );
-      }
     }
   }
 }
 
-const filter = new ObjectFilter(basicData, "string", "안녕하세요");
+const filter = new ObjectFilter(basicData, "string", "아아");
 console.log(filter);
