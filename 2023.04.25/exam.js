@@ -15,15 +15,14 @@ function exampleOne(arr, dataType, itemToFind) {
     console.log("배열이 아닙니다.");
     return false;
   }
-
   const isDataTypeMatched = typeof itemToFind === dataType;
   const isItemExist = arr.includes(itemToFind);
 
   if (isDataTypeMatched === true && isItemExist === true) {
-    console.log(`${itemToFind}는(은) 배열에 존재합니다.`);
+    console.log(`${itemToFind}은(는) 배열에 존재합니다.`);
     return true;
   } else if (isItemExist === false) {
-    console.log(`${itemToFind}는(은) 배열에 존재하지 않습니다.`);
+    console.log(`${itemToFind}은(는) 배열에 존재하지 않습니다.`);
     return false;
   } else if (isDataTypeMatched === false) {
     console.log(`찾으려는 항목은 ${dataType} 데이터 타입이 아닙니다.`);
@@ -39,7 +38,7 @@ const basicData = [
   "함수입니다.",
 ];
 
-console.log(exampleOne(basicData, "string", 11));
+console.log(exampleOne(basicData, "string", "아오"));
 
 //* 2023.04.25 문제풀이
 
