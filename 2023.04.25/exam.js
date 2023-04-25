@@ -53,10 +53,6 @@ class ObjectFilter {
     this.arr = arr;
     this.dataType = typeof dataType;
     this.itemToFind = itemToFind;
-
-    // if (typeof this.itemToFind !== this.dataType) {
-    //   console.log(`itemToFind must be of type ${this.dataType}`);
-    // }
   }
 
   set arr(value) {
@@ -76,5 +72,5 @@ class ObjectFilter {
   }
 }
 
-const filter = new ObjectFilter(basicData, "string", "아아");
+const filter = new ObjectFilter(basicData, "string", "어어");
 console.log(filter);
