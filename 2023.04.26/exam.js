@@ -47,7 +47,7 @@ function exampleOne(array) {
   // 단, 마지막 confirm은 항상 마지막 인덱스어야 합니다.
   return shuffledArray;
 }
-console.log(exampleOne(questions));
+exampleOne(questions);
 
 inquirer.prompt(questions).then((answers) => {
   console.log("결과 :", answers);
