@@ -34,6 +34,23 @@ function evenElevator(floorNumber) {
   }
 }
 
+function eddElevatorTwo(floorNumber) {
+  let questions = [
+    {
+      type: "list",
+      name: "엘레베이터",
+      message: "어떤 엘레베이터를 타시겠습니까?",
+      choices: ["짝수층 엘레베이터, 홀수층 엘레베이터"],
+    },
+    {
+      type: "list",
+      name: "층수",
+      message: `${questions[0].choices[0]}를 탑승하셨습니까. 몇 층으로 이동하시겠습니까?`,
+      choices: [-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    },
+  ];
+}
+
 console.log(oddElevator(5));
 console.log(evenElevator(10));
 
