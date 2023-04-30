@@ -39,6 +39,7 @@
       const second = document.getElementById("second");
       const moveButton = document.getElementById("move-button");
       const root = document.getElementById("root");
+
       moveButton.addEventListener("click", function () {
         second.children[0].appendChild(first.children[0].children[0]);
         if (first.children[0].children.length === 0) {
@@ -51,8 +52,8 @@
             console.log("1초 뒤 실행되나요");
             let text = document.createElement("h1");
             text.innerHTML = "hello!";
-            text.appendChild(root);
-          }, "2000");
+            root.appendChild(text);
+          }, "1000");
         }
       });
       // Q.1 식별자 moveButton을 누르면, first의 첫번째 자식을 second의 마지막 자식으로 이동시키는 코드를 작성해주세요.
@@ -72,3 +73,4 @@
 <!-- 6. first의 자식이 있는지 없는지 확인하는 방법을 찾아봄. -->
 <!-- 7. first children의 길이가 0인지 확인되면 메세지를 띄우도록 함. -->
 <!-- 8. root의 자식들을 전부 지우도록 함. 1초 뒤에 메세지를 출력하게 하면 될 것 같다. -->
+<!-- 9. 1초 뒤에 root까지 사라지는 이유가 뭘까? -->
