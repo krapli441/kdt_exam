@@ -22,14 +22,14 @@
 // 7. 파이썬으로 작성했을 때 for item, list가 어떤 것을 말하는 것인지 잘 모르겠다.
 // 8. gpt에게 물어보니 자바스크립트의 배열과 '유사'한 요소라고 함. 그럼 엄밀히 따지면 배열은 아니라는 것 같다.
 // 9. 파이썬은 item이 list인지 확인하라는 뉘앙스니까 자바스크립트는 매개변수가 배열인지 확인하면 될까?
-// 10. 실행해보니 무한반복이 뜬다.
+// 10. 실행하니까 무한 반복이 뜬다.
 
 const example = [[1, 2, 3], [4, [5, 6]], 7, [8, 9]];
 
 function flatten(data) {
   let output = [];
   for (const array in data) {
-    if (Array.isArray(data)) {
+    if (Array.isArray(array)) {
       console.log("data is array");
       output += flatten(data);
     } else {
