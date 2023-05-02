@@ -34,18 +34,15 @@ class Calculator {
       console.log("더하기 감지");
       result = this.a + this.b;
       console.log(result);
-    }
-    if (value === "minus") {
+    } else if (value === "minus") {
       console.log("빼기 감지");
       result = this.a - this.b;
       console.log(result);
-    }
-    if (value === "divide") {
+    } else if (value === "divide") {
       console.log("나누기 감지");
       result = this.a / this.b;
       console.log(result);
-    }
-    if (value === "multiply") {
+    } else if (value === "multiply") {
       console.log("곱하기 감지");
       result = this.a * this.b;
       console.log(result);
@@ -71,3 +68,4 @@ console.log(new Calculator("add", 10, 20));
 // 7. 그렇다면 계산하는 함수를 따로 만들어야 할까?
 // 8. 계산하는 함수를 추가로 만들고 실행해봤다. 일단 계산은 된다.
 // 그런데 else문이 출력된다.
+// 9. else if 문으로 교체.
