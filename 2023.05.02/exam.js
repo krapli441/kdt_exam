@@ -27,7 +27,6 @@ class Calculator {
       this.b = b;
     } else {
       throw console.error("정수만 입력 가능합니다.");
-      console.log("정수만 입력 가능합니다.");
     }
     this.cal = cal;
     this.Calculate(cal, a, b);
