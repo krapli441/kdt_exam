@@ -6,7 +6,51 @@
 const a = 10;
 const b = 20;
 
-console.log(add(a, b));
-console.log(minus(a, b));
-console.log(divde(a, b));
-console.log(multiply(a, b));
+// console.log(add(a, b));
+// console.log(minus(a, b));
+// console.log(divde(a, b));
+// console.log(multiply(a, b));
+
+// q. 사칙연산 모듈을 4개 만들어서 import(가져오기) 후 호출한 예시다.
+// q. 아무래도 이렇게 하나하나 가져오는 것은 가독성이나 사용성 면에서 좋지 않아보인다.
+// q. 이것을 하나의 Class 형태의 모듈로 만들어 관리할 수 있을까?
+
+// q2. Class에서 작성될 메서드는 모두 '정수'로 된 두 개의 인자를 받아서 결과를 반환하게끔 제한하려면
+// q2. 어떤 helper function을 사용해야 할까?
+// q2. helper function을 사용하면 어떤 장점이 있을까?
+// q2. helper function을 사용하지 않고 구현할 방법이 있을까?
+
+class Calculator {
+  constructor(cal, a, b) {
+    this.cal = cal;
+    this.a = a;
+    this.b = b;
+  }
+
+  set cal(value) {
+    if (value === "add") {
+      console.log("더하기 감지");
+      console.log(a + b);
+    }
+    if (value === "minus") {
+      console.log("빼기 감지");
+      console.log(a - b);
+    }
+    if (value === "divide") {
+      console.log("나누기 감지");
+      console.log(a / b);
+    }
+    if (value === "multiply") {
+      console.log("곱하기 감지");
+      console.log(a * b);
+    }
+  }
+}
+
+const add = new Calculator("multiply", a, b);
+console.log(add);
+
+//*2020.05.02 문제풀이
+
+// 1. 일단 문제 작성.
+// 2. class 형식으로 우선 사칙연산을 만들어봤다.
