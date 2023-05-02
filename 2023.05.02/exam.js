@@ -3,8 +3,8 @@
 // const minus = require ('./utility-module-divide.js')
 // const minus = require ('./utility-module-multiply.js')
 
-const a = 10;
-const b = 20;
+// const a = 10;
+// const b = 20;
 
 // console.log(add(a, b));
 // console.log(minus(a, b));
@@ -30,27 +30,33 @@ class Calculator {
   set cal(value) {
     if (value === "add") {
       console.log("더하기 감지");
-      console.log(a + b);
+      console.log(this.a + this.b);
     }
     if (value === "minus") {
       console.log("빼기 감지");
-      console.log(a - b);
+      console.log(this.a - this.b);
     }
     if (value === "divide") {
       console.log("나누기 감지");
-      console.log(a / b);
+      console.log(this.a / this.b);
     }
     if (value === "multiply") {
       console.log("곱하기 감지");
-      console.log(a * b);
+      console.log(this.a * this.b);
+    } else {
+      console.log(
+        "add(더하기), minus(빼기), divide(나누기), multuply(곱하기) 네가지 중 하나를 입력하셔야 합니다."
+      );
     }
   }
 }
 
-const add = new Calculator("multiply", a, b);
+const add = new Calculator("add", 10, 20);
 console.log(add);
 
 //*2020.05.02 문제풀이
 
 // 1. 일단 문제 작성.
 // 2. class 형식으로 우선 사칙연산을 만들어봤다.
+// 3. a에 10, b에 20이라는 수가 선언돼있으니 이걸 바꿔보면 어떨까? NaN 오류가 뜬다.
+// 4. 분명 숫자가 입력됐는데 NaN이라고 왜 뜨는 걸까?
