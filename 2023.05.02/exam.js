@@ -22,9 +22,14 @@
 
 class Calculator {
   constructor(cal, a, b) {
+    if (Number.isInteger(a) && Number.isInteger(b)) {
+      this.a = a;
+      this.b = b;
+    } else {
+      throw console.error("정수만 입력 가능합니다.");
+      console.log("정수만 입력 가능합니다.");
+    }
     this.cal = cal;
-    this.a = a;
-    this.b = b;
     this.Calculate(cal, a, b);
   }
 
@@ -55,6 +60,9 @@ class Calculator {
 }
 
 console.log(new Calculator("add", 10, 20));
+console.log(new Calculator("minus", 10, 20));
+console.log(new Calculator("divide", 10, 20));
+console.log(new Calculator("multiply", 10, 20));
 
 //*2020.05.02 문제풀이
 
@@ -69,3 +77,5 @@ console.log(new Calculator("add", 10, 20));
 // 8. 계산하는 함수를 추가로 만들고 실행해봤다. 일단 계산은 된다.
 // 그런데 else문이 출력된다.
 // 9. else if 문으로 교체.
+// 10. 정수인지 확인할 수 있는 메서드가 있는지 검색. Number.isInteger 메서드가 있다.
+// 11. 정수를 입력하지 않았을 경우, 아예 에러가 뜨도록 변경함.
