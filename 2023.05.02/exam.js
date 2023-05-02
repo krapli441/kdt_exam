@@ -27,25 +27,10 @@ class Calculator {
     this.b = b;
   }
 
-  set a(value) {
-    if (typeof value === "number") {
-      this._a = value;
-    } else {
-      console.log("숫자를 입력해주세요.");
-    }
-  }
-
-  set b(value) {
-    if (typeof value === "number") {
-      this._b = value;
-    } else {
-      console.log("숫자를 입력해주세요.");
-    }
-  }
   set cal(value) {
     if (value === "add") {
       console.log("더하기 감지");
-      console.log(this._a + this._b);
+      console.log(this.a + this.b);
     }
     if (value === "minus") {
       console.log("빼기 감지");
