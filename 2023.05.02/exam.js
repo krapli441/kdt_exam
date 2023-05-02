@@ -27,10 +27,25 @@ class Calculator {
     this.b = b;
   }
 
+  set a(value) {
+    if (typeof value === "number") {
+      this._a = value;
+    } else {
+      console.log("숫자를 입력해주세요.");
+    }
+  }
+
+  set b(value) {
+    if (typeof value === "number") {
+      this._b = value;
+    } else {
+      console.log("숫자를 입력해주세요.");
+    }
+  }
   set cal(value) {
     if (value === "add") {
       console.log("더하기 감지");
-      console.log(this.a + this.b);
+      console.log(this._a + this._b);
     }
     if (value === "minus") {
       console.log("빼기 감지");
@@ -60,3 +75,4 @@ console.log(add);
 // 2. class 형식으로 우선 사칙연산을 만들어봤다.
 // 3. a에 10, b에 20이라는 수가 선언돼있으니 이걸 바꿔보면 어떨까? NaN 오류가 뜬다.
 // 4. 분명 숫자가 입력됐는데 NaN이라고 왜 뜨는 걸까?
+// 5. a와 b에 set을 추가했는데도 NaN이 뜬다.
