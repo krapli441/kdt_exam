@@ -45,3 +45,8 @@ function exampleOne(numberValue) {
 
 const result = exampleOne(10);
 console.log(result);
+
+//* 2023.05.03 문제풀이
+
+// 1. 문제 작성.
+// 2. 난 콜백 지옥을 경험해본 적이 없으니 일단 무작정 트라이해본다.
