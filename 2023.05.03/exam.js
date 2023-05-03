@@ -108,7 +108,7 @@ function exampleOne(numberValue) {
                     if (error) {
                       throw error;
                     } else {
-                      data(null, fourth);
+                      return fourth;
                     }
                   });
                 }
