@@ -51,12 +51,12 @@
 // 1. 문제 작성.
 // 2. 난 콜백 지옥을 경험해본 적이 없으니 일단 무작정 트라이해본다.
 
-function exampleOne(numberValue, result) {
+function exampleOne(numberValue) {
   //sequence .1
   // 매개변수가 정수인지 확인하는 함수 integerCheck()
-  function integerCheck(data, result) {
+  function integerCheck(data) {
     if (Number.isInteger(data) === true) {
-      result(null, data);
+      return data; // 에러 객체가 없음을 의미하는 null
     } else {
       return new Error("이 함수는 정수가 필요합니다.");
     }
@@ -88,7 +88,37 @@ function exampleOne(numberValue, result) {
 
   // 호출 부분
 
-  integerCheck(numberValue);
+  integerCheck(numberValue, (error, data) => {
+    if (error) {
+      throw error;
+    } else {
+      innerOne(data, (error, first) => {
+        if (error) {
+          throw error;
+        } else {
+          innerTwo(first, (error, second) => {
+            if (error) {
+              throw error;
+            } else {
+              innerThree(second, (error, third) => {
+                if (error) {
+                  throw error;
+                } else {
+                  innerFour(third, (error, fourth) => {
+                    if (error) {
+                      throw error;
+                    } else {
+                      data(null, fourth);
+                    }
+                  });
+                }
+              });
+            }
+          });
+        }
+      });
+    }
+  });
   const first = innerOne(numberValue);
   const second = innewTwo(first);
   const third = innerThree(second);
