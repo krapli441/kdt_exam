@@ -46,11 +46,6 @@
 // const result = exampleOne(10);
 // console.log(result);
 
-//* 2023.05.03 문제풀이
-
-// 1. 문제 작성.
-// 2. 난 콜백 지옥을 경험해본 적이 없으니 일단 무작정 트라이해본다.
-
 function exampleOne(numberValue) {
   //sequence .1
   // 매개변수가 정수인지 확인하는 함수 integerCheck()
@@ -128,3 +123,10 @@ function exampleOne(numberValue) {
 
 const result = exampleOne(10);
 console.log(result);
+
+//* 2023.05.03 문제풀이
+
+// 1. 문제 작성.
+// 2. 난 콜백 지옥을 경험해본 적이 없으니 일단 무작정 트라이해본다.
+// 3. 콜백 지옥 작성. 쓰고나니 가독성이 좋아보이진 않는다.
+// 4. Promise를 연습해보자.
