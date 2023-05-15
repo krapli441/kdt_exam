@@ -8,4 +8,4 @@ promise.then(
   (error) => console.log(error) // 실행되지 않음
 );
 
-let promise = new Promise();
+// let promise = new Promise();
