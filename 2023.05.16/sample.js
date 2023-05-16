@@ -5,8 +5,9 @@ const pokemonList = ["피카츄", "라이츄", "파이리", "꼬부기"];
 // 예를 들어 위의 배열 0번 부터 1번까지의 전기 포켓몬을 교체하고 싶다면
 // 아래와 같이 splice 메서드를 사용할 수 있다.
 pokemonList.splice(0, 2, "야도란", "또가스");
+pokemonList.join("");
 
-console.log(pokemonList);
+console.log(pokemonList.join(""));
 // splice(포함, 미만, 교체할 값1, 교체할 값2) 방식으로
 // 기존에 소개했던 메서드와 비슷한 듯 다르다.
 // 현 위치 라인에서 pokemonList를 디버깅 하면
