@@ -1,21 +1,20 @@
-/**
- * @param {array} targetArray
- * @param {array} compareArray
- * @param {array} originalArray
- * @returns {object} 중복된 요소와 바뀔 요소를 담은 객체
- *
- * git의 diff 기능처럼 두 값(배열)을 비교하여, 중복되는 요소가 있을 경우
- * 중복되는 요소를 바꾸기 위해 필요한 요소를 담은 객체를 리턴하는 논리를
- * 매우 자주 사용한다.
- */
+interface diffResult {
+  duplicatedElement: string | null;
+  replaceElement: string | null;
+}
 
-function diffFinder(targetArray, compareArray, originalArray) {
+function diffFinder(
+  targetArray: string[],
+  compareArray: string[],
+  originalArray: string[]
+): diffResult {
   // 복사할 요소와, 교체할 요소를 별도의 메모리(변수)에 담아놓기 위해 null로 초기화
   // 이렇게 지역 변수로 '이름'을 작성해 무엇을 염두하고 있는지를 유추할 수 있다.
-  let duplicatedElement = null;
-  let replaceElement = null;
+  let duplicatedElement: string | null = null;
+  let replaceElement: string | null = null;
 
-  // todo : typescript로 변환할 때
+  // todo :
+  // typescript로 변환할 때
   // 위 두개의 지역변수의 기본형은
   // let duplicatedElement: null = null;
   // null 데이터 타입을 명시하는 것이 맞다.
@@ -39,8 +38,8 @@ function diffFinder(targetArray, compareArray, originalArray) {
   };
 }
 
-const pokemon = ["피카츄", "라이츄", "파이리", "꼬부기"];
-const digimon = ["코로몬", "테일몬", "가브몬", "꼬부기"];
-const digimonOriginalData = ["코로몬", "테일몬", "가브몬", "어니몬"];
+let pokemon: string[] = ["피카츄", "라이츄", "파이리", "꼬부기"];
+let digimon: string[] = ["코로몬", "테일몬", "가브몬", "꼬부기"];
+let digimonOriginalData: string[] = ["코로몬", "테일몬", "가브몬", "어니몬"];
 
 console.log(diffFinder(digimon, pokemon, digimonOriginalData));
