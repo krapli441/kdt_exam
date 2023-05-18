@@ -26,7 +26,9 @@ function spacingLetter(text, nounData, spacing) {
     if (text.includes(nounData[i])) {
       console.log(`${nounData[i]}`);
       rename += nounData[i];
-      rename += spacing;
+      if (i !== nounData.length - 1) {
+        rename += spacing; // 마지막 띄어쓰기 하나는 생략하기.
+      }
     }
   }
   console.log(rename);
