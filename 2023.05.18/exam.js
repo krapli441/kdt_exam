@@ -31,7 +31,10 @@ function spacingLetter(text, nounData, spacing) {
   }
   console.log(rename);
 
-  let result = text.replace("아버지", rename);
+  let result = text;
+  for (let i = 0; i < nounData.length; i++) {
+    result = result.replace(nounData[i], nounData[i] + spacing);
+  }
 
   return result;
 }
